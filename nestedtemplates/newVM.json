@@ -103,7 +103,7 @@
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
                     },
-                    "dataDisks": "[reference(concat('datadsk-',parameters('vmName'))).outputs.dataDiskArray.value]"
+                    "dataDisks": "[reference(concat('datadisk-',parameters('vmName'))).outputs.dataDiskArray.value]"
                 },
                 "networkProfile": {
                     "networkInterfaces": [
