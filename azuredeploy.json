@@ -9,7 +9,6 @@
       "metadata": {
         "description": "Naming prefix for each new resource created. 1-char min, 8-char max, lowercase alphanumeric"
       }
-	  "defaultValue": "i"
     },
     "vmSize": {
       "type": "string",
@@ -67,14 +66,12 @@
       "metadata": {
         "description": "DNS domain name for existing Active Directory domain"
       }
-	  "defaultValue": "visufarma.com"
     },
     "adminUsername": {
       "type": "string",
       "metadata": {
         "description": "Name of the Administrator of the existing Active Directory Domain"
       }
-      "defaultValue": "VISUadmin"
     },
     "adminPassword": {
       "type": "securestring",
@@ -88,21 +85,18 @@
       "metadata": {
         "description": "Resource Group Name for the existing VNET."
       }
-      "defaultValue": "visu-core-dc-p"
     },
     "existingVirtualNetworkName": {
       "type": "string",
       "metadata": {
         "description": "Name of the existing VNET."
       }
-	  "defaultValue": "visu-vnet-1-p"
     },
     "existingSubnetName": {
       "type": "string",
       "metadata": {
         "description": "Name of the existing subnet in the existing VNET to which the S2D VMs should be deployed"
       }
-	  "defaultValue": "b-file"
     },
     "sofsName": {
       "type": "string",
