@@ -138,8 +138,10 @@
     },
     "variables": {
         "apiVersionStorage": "2016-01-01",
-        "witnessStorageName": "[concat(parameters('namePrefix'),uniqueString(resourceGroup().id),'cw')]",
-        "witnessStorageType": "Standard_LRS",
+        "witnessStorageName": "visusacwipp1",
+		"witnessStorageType": "Standard_LRS",
+        "vhdStorageAccountName": "visusafileipp1",
+        "storageAccountType": "Premium_LRS",		
         "vmNamePrefix": "[concat(parameters('namePrefix'),'-file-p-')]",
         "vmAvailabilitySetName": "visu-as-file-p",
         "clusterName": "[concat(variables('vmNamePrefix'),'c')]",
@@ -161,6 +163,16 @@
                 "managed": "true"
             }
         },
+		{
+            "type": "Microsoft.Storage/storageAccounts",
+			"name": "[variables('vhdStorageAccountName')]",
+            "apiVersion": "2016-05-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+            },
+            "sku":{"name":"[variables('storageAccountType')]"},
+            "kind":"Storage"
+        },
         {
             "type": "Microsoft.Storage/storageAccounts",
             "name": "[variables('witnessStorageName')]",
@@ -172,7 +184,7 @@
             "kind": "Storage"
         },
         {
-            "name": "[concat(variables('vmNamePrefix'), copyindex(), '-nic')]",
+            "name": "[concat('visu-nic-',variables('vmNamePrefix'), copyindex())]",
             "type": "Microsoft.Network/networkInterfaces",
             "location": "[resourceGroup().location]",
             "apiVersion": "2016-09-01",
