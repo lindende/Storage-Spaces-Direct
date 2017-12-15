@@ -138,7 +138,7 @@
     },
     "variables": {
         "apiVersionStorage": "2016-01-01",
-        "witnessStorageName": "vsfsacwipp1",
+        "witnessStorageName": "vsfsafilespcw",
 		"witnessStorageType": "Standard_LRS",
         "vhdStorageAccountName": "vsfsafileipp1",
         "storageAccountType": "Premium_LRS",		
