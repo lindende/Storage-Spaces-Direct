@@ -138,12 +138,12 @@
     },
     "variables": {
         "apiVersionStorage": "2016-01-01",
-        "witnessStorageName": "visusacwipp1",
+        "witnessStorageName": "vsfsacwipp1",
 		"witnessStorageType": "Standard_LRS",
-        "vhdStorageAccountName": "visusafileipp1",
+        "vhdStorageAccountName": "vsfsafileipp1",
         "storageAccountType": "Premium_LRS",		
         "vmNamePrefix": "[concat(parameters('namePrefix'),'-file-p-')]",
-        "vmAvailabilitySetName": "visu-as-file-p",
+        "vmAvailabilitySetName": "vsf-as-file-p",
         "clusterName": "[concat(variables('vmNamePrefix'),'c')]",
         "vmLoopTemplateURL": "[concat(parameters('_artifactsLocation'),'/nestedtemplates/newVM.json',parameters('_artifactsLocationSasToken'))]",
         "s2dPrepModulesURL": "[concat(parameters('_artifactsLocation'),'/dsc/prep-s2d.ps1.zip',parameters('_artifactsLocationSasToken'))]",
@@ -184,7 +184,7 @@
             "kind": "Storage"
         },
         {
-            "name": "[concat('visu-nic-',variables('vmNamePrefix'), copyindex())]",
+            "name": "[concat('vsf-nic-',variables('vmNamePrefix'), copyindex())]",
             "type": "Microsoft.Network/networkInterfaces",
             "location": "[resourceGroup().location]",
             "apiVersion": "2016-09-01",

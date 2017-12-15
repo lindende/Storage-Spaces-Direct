@@ -108,7 +108,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('visu-nic-',parameters('vmName')))]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('vsf-nic-',parameters('vmName')))]"
                         }
                     ]
                 }
